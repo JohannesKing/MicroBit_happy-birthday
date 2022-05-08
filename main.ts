@@ -44,3 +44,31 @@ input.onButtonPressed(Button.A, function () {
         music.playTone(349, music.beat(BeatFraction.Double))
     }
 })
+input.onButtonPressed(Button.B, function () {
+    basic.clearScreen()
+})
+input.onGesture(Gesture.Shake, function () {
+    basic.showLeds(`
+        . # # # .
+        # # . # #
+        # . . . #
+        # # . # #
+        . # # # .
+        `)
+    music.playTone(330, music.beat(BeatFraction.Quarter))
+    music.playTone(392, music.beat(BeatFraction.Quarter))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(622, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Whole))
+    basic.clearScreen()
+    radio.sendString("fuck off unity")
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showLeds(`
+        # . # # #
+        # . # . .
+        # . # # #
+        # . # . #
+        # . # # #
+        `)
+})
